@@ -1,0 +1,266 @@
+body {
+	overflow-y: scroll;
+	background: #f2f2f2;
+}
+
+.menu {
+	border-top: 1px solid #cccccc;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	width: 100%;
+	background: #ffffff;
+	line-height: 23px;
+}
+
+.menu .bottom-nav li {
+	text-align: center;
+	float: left;
+	list-style-type: none;
+	padding: 4px 12px;
+	border-right: 1px solid #ccc;
+	color: #000;
+	width: 33%;
+}
+
+.menu .bottom-nav li:last-of-type {
+	border-right: none
+}
+
+.menu .bottom-nav a {
+	color: #000;
+}
+
+.menu .bottom-nav .active a {
+	color: red;
+}
+
+.menu .bottom-nav span {
+	display: block;
+}
+
+.menu .bottom-nav li.active {
+	color: red;
+	background-image: -webkit-gradient(
+			linear,
+			left top,
+			left bottom,
+			color-stop(0, #dbdbdb),
+			color-stop(1, #ffffff)
+	);
+	background-image: -o-linear-gradient(bottom, #dbdbdb 0%, #ffffff 100%);
+	background-image: -moz-linear-gradient(bottom, #dbdbdb 0%, #ffffff 100%);
+	background-image: -webkit-linear-gradient(bottom, #dbdbdb 0%, #ffffff 100%);
+	background-image: -ms-linear-gradient(bottom, #dbdbdb 0%, #ffffff 100%);
+	background-image: linear-gradient(to bottom, #dbdbdb 0%, #ffffff 100%);
+}
+
+.header {
+	border-bottom: 1px solid #cccccc;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: 100%;
+	color: #000;
+	background: #ffffff;
+	font-size: 18px;
+	line-height: 45px;
+}
+
+.container-view {
+	position: relative;
+	margin: 46px 0;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #000;
+	opacity: 0.5;
+}
+
+.panel {
+	background: #fff;
+	color: rgb(66, 94, 106);
+	font-family: 'trebuchet ms';
+	font-size: 14px;
+	line-height: 20px;
+	text-shadow: 0px 1px rgb(255, 255, 255);
+}
+.panel-body {
+	padding: 0px;
+}
+.panel span > p,
+.panel ul,
+.signs-overview li {
+	list-style-type: none;
+	margin: 10px 0 1px 0;
+	border-radius: 2px;
+	padding: 20px 15px;
+	background: #f2f2f2;
+	color: #000000;
+	border: 0;
+	border-bottom: 1px solid rgb(204, 204, 204);
+	box-shadow: 0 1px 1px #fff;
+}
+
+.signs-overview {
+	background: #ffffff;
+}
+
+.signs-overview li {
+	padding: 12px;
+}
+.panel ul {
+	margin-top: -14px;
+	border-top: 1px solid rgb(204, 204, 204);
+	padding-top: 10px;
+	padding-left: 25px;
+
+}
+.panel li {
+	margin-bottom: 10px;
+}
+
+.sign-category div {
+
+}
+
+.sign-category div span {
+	display: block;
+	line-height: 40px;
+}
+
+.navbar {
+	background: #404855;
+	color: #ffffff;
+	border: 0;
+}
+
+.main-nav span {
+	color: #ffffff;
+	line-height: 47px;
+	font-size: 22px;
+	padding: 0 14px;
+	border-right: 1px solid rgb(95, 95, 95);
+	box-shadow: 1px 0 0px rgb(65, 65, 65);
+	float: left;
+	content: '';
+}
+
+.main-nav span:hover {
+	background: rgb(117, 117, 117);
+	text-decoration: none;
+}
+
+.container-fluid {
+	padding: 0
+}
+
+a.list-group-item,
+.list-group-item {
+	padding: 20px 15px;
+	background: #f2f2f2;
+	color: #000000;
+	border: 0;
+	border-bottom: 1px solid rgb(204, 204, 204);
+	margin-bottom: 1px;
+	box-shadow: 0 1px 1px #fff;
+}
+
+a.list-group-item:last-of-type,
+.list-group-item:last-of-type {
+	border-bottom: none;
+	margin-bottom: 1px;
+	box-shadow: none;
+}
+
+a.list-group-item:hover,
+.list-group-item:hover {
+	background: #f2f2f2;
+	color: #000000;
+}
+
+ul {
+	padding: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.sign-category {
+	color: #ffffff;
+}
+
+.sign-category:hover {
+	color: #ffffff;
+}
+
+.ribbon {
+	width: 70%;
+	height: 45px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.text-justify {
+	text-align: justify !important;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-ico {
+	left: 30px;
+	color: #cccccc;
+}
+
+.search-input {
+	display: inline-block;
+	outline: none;
+	border: 0;
+	background: #ffffff;
+	color: #000000;
+	width: 90%;
+	padding: 0 12px 4px 36px;
+	border-radius: 2px;
+	border-bottom: 1px solid #9e9e9e;
+	line-height: normal;
+}
+
+.search-submit {
+	position: absolute;
+	right: 4%;
+	top: 12px;
+}
+
+.exit-div {
+	color: #fff;
+	background: #4d4d4d;
+	position: fixed;
+	bottom: 2%;
+	right: 10%;
+	width: 80%;
+	text-align: center;
+	z-index: 9999;
+	opacity: 0.8;
+	border-radius: 4px;
+}
+
+.name-div {
+	text-overflow: ellipsis;
+}
+
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}

@@ -1,0 +1,7 @@
+<div class="list-group">
+  <div class="list-group-item" ng-repeat="list in lists" repeat-done="readyList()">
+    <a ng-href="#/show/{{list.id - 1}}">{{list.caption}}</a>
+    <br/>
+    <span>{{list.text | part1 }}</span><span style="background: #9ad6dd">{{list.text | showSearchText }}</span><span>{{list.text | part2 }}</span>
+  </div>
+</div>

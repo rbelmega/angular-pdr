@@ -1,0 +1,5 @@
+<div class="list-group">
+ <a ng-repeat="list in lists" repeat-done="readyList()" class="list-group-item" ng-href="#/show/{{$index}}">
+   {{$index + 1}}. {{::list.name}}
+ </a>
+</div>

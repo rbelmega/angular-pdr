@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<title>PDR</title>
+</head>
+<body ng-cloak ng-controller="mainCtrl">
+
+<div class="header text-center">
+	<div ng-hide="showSearch">
+		<div class="ribbon">{{ topicName }}</div>
+
+		<div style="position:absolute;right:0; top:0; padding: 0 12px;" ng-show="false"
+				ng-click="share()">
+			<span class="glyphicon glyphicon-share"
+					style="padding: 4px 12px; color: #000"></span>
+		</div>
+		<div style="position:absolute;left:0; top:0; padding: 0 12px;" ng-show="showControlls"
+				ng-click="back()">
+			<span class="glyphicon glyphicon-chevron-left"
+					style="padding: 4px 12px; color: #000"></span>
+		</div>
+	</div>
+
+	<div ng-show="showSearch" class="search">
+			<form ng-submit="searchClick(searchText)" class="search-form" ng-model="searchForm">
+			<span class="glyphicon glyphicon-search search-ico"></span>
+			<input type="search" placeholder="Search" ng-model="searchText" class="search-input">
+			<span class="glyphicon glyphicon-arrow-right search-submit"
+					ng-click="searchClick(searchText)"></span>
+		</form>
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="container-view">
+	<ng-view ></ng-view>
+	<div class="overlay" ng-show="showSearchOverlay"></div>
+</div>
+
+<div class="menu">
+
+	<ul class="bottom-nav">
+		<li ng-class="{active : activeMenu === 'home' }"
+				ng-click="showMain()">
+			<span class="glyphicon glyphicon-th-list"></span>
+			<span> Головна </span>
+		</li>
+		<li ng-class="{active : activeMenu === 'signs' }"
+				ng-click="showSigns()">
+			<span class="glyphicon glyphicon-warning-sign"></span>
+			<span> Знаки </span>
+		</li>
+		<li ng-class="{active : activeMenu === 'search' }"
+				ng-click="showSearchPage()">
+			<span class="glyphicon glyphicon-search"></span>
+			<span> Пошук </span>
+		</li>
+	</ul>
+</div>
+<div class="exit-div" ng-show="showExit">Для виходу натисніть кнопку "Назад" ще раз</div>
+
+<script src="js/lib.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
