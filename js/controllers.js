@@ -48,6 +48,15 @@ controllers.mainCtrl = function($rootScope, $scope, $location, $timeout) {
 		$scope.showSearchOverlay = false;
 	};
 
+	$scope.showFinesPage = function() {
+		$scope.selectedMenuItem.pop();
+		$scope.selectedMenuItem.push('fines');
+		$scope.go('/fines');
+		$scope.topicName = 'Штрафи';
+		$scope.activeMenu = 'fines';
+		$scope.showSearchOverlay = false;
+	};
+
 	$scope.showSearchPage = function() {
 		$scope.searchText = "";
 		$scope.showSearch = !$scope.showSearch;
@@ -124,7 +133,18 @@ controllers.topics = function($scope, listOfTopic) {
 
 controllers.search = function($rootScope, $scope, itemsFactory, $routeParams) {
 
-	$scope.lists = itemsFactory.getFilteredItem($routeParams.searchText);
+	itemsFactory.getFilteredItem($routeParams.searchText).then(function(data){
+		$scope.lists = data;
+	});
+//	$scope.lists = itemsFactory.getFilteredItem($routeParams.searchText);
+
+};
+controllers.fineCtrl = function(finesFactory, $scope) {
+
+	finesFactory.getFines().then(function(data){
+		$scope.fines = data;
+	});
+//	$scope.lists = itemsFactory.getFilteredItem($routeParams.searchText);
 
 };
 
@@ -157,7 +177,9 @@ controllers.navCtrl = function($scope, itemsFactory, $location) {
 };
 
 controllers.signCtrl = function($scope, signFactory, $routeParams) {
-
+	$scope.goTo = function(item){
+		$scope.go('signs/' + item);
+	};
 	$scope.categories = signFactory.get();
 	$scope.sign = $routeParams.sign;
 

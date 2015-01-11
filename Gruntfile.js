@@ -19,8 +19,11 @@ module.exports = function(grunt) {
               'js/filter.js']
         },
           {
-            'dist/js/lib.min.js': ['js_libs/jquery-1.11.0.min.js', 'js_libs/bootstrap.min.js',
-            'js_libs/angular.min.js', 'js_libs/angular-route.js']
+            'dist/js/lib.min.js': [
+              'js_libs/jquery-1.11.0.min.js',
+              'js_libs/bootstrap.min.js',
+              'bower_components/angular/angular.min.js',
+              'js_libs/angular-route.js']
           }]
       }
     },

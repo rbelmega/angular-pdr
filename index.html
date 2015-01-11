@@ -21,7 +21,7 @@
 		<div style="position:absolute;left:0; top:0; padding: 0 12px;" ng-show="showControlls"
 				ng-click="back()">
 			<span class="glyphicon glyphicon-chevron-left"
-					style="padding: 4px 12px; color: #000"></span>
+					style="padding: 4px 12px; color: #ffffff"></span>
 		</div>
 	</div>
 
@@ -43,24 +43,34 @@
 </div>
 
 <div class="menu">
-
-	<ul class="bottom-nav">
-		<li ng-class="{active : activeMenu === 'home' }"
+		<button class="md-button"
+				ng-class="{active : activeMenu === 'home' }"
 				ng-click="showMain()">
 			<span class="glyphicon glyphicon-th-list"></span>
 			<span> Головна </span>
-		</li>
-		<li ng-class="{active : activeMenu === 'signs' }"
+		</button>
+
+		<button class="md-button"
+				ng-class="{active : activeMenu === 'signs' }"
 				ng-click="showSigns()">
 			<span class="glyphicon glyphicon-warning-sign"></span>
 			<span> Знаки </span>
-		</li>
-		<li ng-class="{active : activeMenu === 'search' }"
+		</button>
+
+		<button class="md-button"
+				ng-class="{active : activeMenu === 'fines' }"
+				ng-click="showFinesPage()">
+			<span class="glyphicon glyphicon-info-sign"></span>
+			<span> Штрафи </span>
+		</button>
+
+		<button class="md-button"
+				ng-class="{active : activeMenu === 'search' }"
 				ng-click="showSearchPage()">
 			<span class="glyphicon glyphicon-search"></span>
 			<span> Пошук </span>
-		</li>
-	</ul>
+		</button>
+
 </div>
 <div class="exit-div" ng-show="showExit">Для виходу натисніть кнопку "Назад" ще раз</div>
 
